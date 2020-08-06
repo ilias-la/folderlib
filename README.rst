@@ -1,0 +1,191 @@
+
+.. |Logo|   image:: https://assets.gitlab-static.net/j3di/folderlib/raw/console-version/logo/logo.png
+            :align: middle
+            :alt: folderlib logo
+
+.. |docs|   image:: https://readthedocs.org/projects/folder-wonder/badge/?version=latest
+            :target: https://folderlib.readthedocs.io/en/latest/?badge=latest
+            :alt: Documentation Status
+
+.. |pypi|   image:: https://img.shields.io/pypi/v/folderlib.svg
+            :target: https://pypi.python.org/pypi/folder_wonder
+
+.. |python| image:: https://img.shields.io/pypi/pyversions/hypercorn.svg
+            :target: https://pypi.python.org/pypi/folder_wonder
+
+.. |license| image:: https://img.shields.io/badge/licence-MIT-green.svg
+            :target: https://gitlab.com/j3di/folder-wonder/blob/console-version/LICENSE
+
+################################################################################
+|Logo|
+################################################################################
+
+
+|pypi| |docs| |python| |license|
+
+A python package which contains various manipulating techniques for folders
+
+
+* Free software: MIT license
+* Documentation: https://folder-wonder.readthedocs.io.
+
+
+Project Setup
+*************
+
+Here we provide some details about the project setup. Most of the choices are explained in the `guide <https://guide.esciencecenter.nl>`_. Links to the relevant sections are included below.
+Feel free to remove this text when the development of the software package takes off.
+
+For a quick reference on software development, we refer to `the software guide checklist <https://guide.esciencecenter.nl/best_practices/checklist.html>`_.
+
+Python versions
+---------------
+
+This repository is set up with Python versions:
+* 3.4
+* 3.5
+* 3.6
+
+Add or remove Python versions based on project requirements. `The guide <https://guide.esciencecenter.nl/best_practices/language_guides/python.html>`_ contains more information about Python versions and writing Python 2 and 3 compatible code.
+
+Package management and dependencies
+-----------------------------------
+
+You can use either `pip` or `conda` for installing dependencies and package management. This repository does not force you to use one or the other, as project requirements differ. For advice on what to use, please check `the relevant section of the guide <https://guide.esciencecenter.nl/best_practices/language_guides/python.html#dependencies-and-package-management>`_.
+
+* Dependencies should be added to `setup.py` in the `install_requires` list.
+
+Testing and code coverage
+-------------------------
+
+* Tests should be put in the ``tests`` folder.
+* The ``tests`` folder contains:
+
+  - Example tests that you should replace with your own meaningful tests (file: ``test_folder_wonder``)
+  - A test that checks whether your code conforms to the Python style guide (PEP 8) (file: ``test_lint.py``)
+
+* The testing framework used is `PyTest <https://pytest.org>`_
+
+  - `PyTest introduction <http://pythontesting.net/framework/pytest/pytest-introduction/>`_
+
+* Tests can be run with ``python setup.py test``
+
+  - This is configured in ``setup.py`` and ``setup.cfg``
+
+* Use `Travis CI <https://travis-ci.com/>`_ to automatically run tests and to test using multiple Python versions
+
+
+
+Documentation
+-------------
+
+* Documentation should be put in the ``docs`` folder. The contents have been generated using ``sphinx-quickstart`` (Sphinx version 1.6.5).
+* We recommend writing the documentation using Restructured Text (reST) and Google style docstrings.
+
+  - `Restructured Text (reST) and Sphinx CheatSheet <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`_
+  - `Google style docstring examples <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`_.
+
+* The documentation is set up with the Read the Docs Sphinx Theme.
+
+  - Check out the `configuration options <https://sphinx-rtd-theme.readthedocs.io/en/latest/>`_.
+
+* To generate html documentation run ``python setup.py build_sphinx``
+
+  - This is configured in ``setup.cfg``
+  - Alternatively, run ``make html`` in the ``docs`` folder.
+
+* The ``docs/_templates`` directory contains an (empty) ``.gitignore`` file, to be able to add it to the repository. This file can be safely removed (or you can just leave it there).
+* To put the documentation on `Read the Docs <https://readthedocs.org>`_, log in to your Read the Docs account, and import the repository (under 'My Projects').
+
+  - Include the link to the documentation in this README_.
+
+
+Coding style conventions and code quality
+-----------------------------------------
+
+* Check your code style with ``prospector``
+* You may need run ``pip install .[dev]`` first, to install the required dependencies
+* You can use ``yapf`` to fix the readability of your code style and ``isort`` to format and group your imports
+
+Package version number
+----------------------
+
+* We recommend using `semantic versioning <https://guide.esciencecenter.nl/best_practices/releases.html#semantic-versioning>`_.
+* For convenience, the package version is stored in a single place: ``folder_wonder/__version__.py``. For updating the version number, you only have to change this file.
+* Don't forget to update the version number before `making a release <https://guide.esciencecenter.nl/best_practices/releases.html>`_!
+
+CHANGELOG.rst
+-------------
+
+* Document changes to your software package
+
+CITATION.cff
+------------
+
+* To allow others to cite your software, add a ``CITATION.cff`` file
+* It only makes sense to do this once there is something to cite (e.g., a software release with a DOI).
+* Follow the `making software citable <https://guide.esciencecenter.nl/citable_software/making_software_citable.html>`_ section in the guide.
+
+CODE_OF_CONDUCT.rst
+-------------------
+
+* Information about how to behave professionally
+
+CONTRIBUTING.rst
+----------------
+
+* Information about how to contribute to this software package
+
+MANIFEST.in
+-----------
+
+* List non-Python files that should be included in a source distribution
+
+NOTICE
+------
+
+* List of attributions of this project and Apache-license dependencies
+
+Installation
+------------
+
+To install folder-wonder, do:
+
+.. code-block:: console
+
+  git clone https://gitlab.com/j3di/folder-wonder
+  cd folder_wonder
+  pip install .
+
+
+Run tests (including coverage) with:
+
+.. code-block:: console
+
+  python setup.py test
+
+
+Documentation
+*************
+
+.. _README:
+
+Include a link to your project's full documentation here.
+
+Contributing
+************
+
+If you want to contribute to the development of FolderWonder,
+have a look at the `contribution guidelines <CONTRIBUTING.rst>`_.
+
+`License <LICENCE>`__
+*********************
+
+
+Credits
+*******
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
